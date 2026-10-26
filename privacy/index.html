@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chính sách quyền riêng tư · Edu Quiz</title>
+<style>
+:root{--ink:#1F2A1A;--ink2:#56604F;--bg:#F7F9EE;--green:#3A7D00;--line:#E2E8CF;--card:#FFFFFF}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--ink:#EEF2E6;--ink2:#C3CBB8;--bg:#161C12;--green:#8FDB4C;--line:#2E3A26;--card:#1F281A}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:system-ui,-apple-system,"Segoe UI",sans-serif;font-size:17px;line-height:1.6}
+main{max-width:760px;margin:0 auto;padding:32px 16px 64px}
+h1,h2,h3{line-height:1.2;margin:0}
+h1{font-size:32px;font-weight:800}
+h2{font-size:23px;font-weight:800;margin-top:34px}
+p,li{margin:8px 0}
+.meta{color:var(--ink2);font-size:15px;margin-top:6px}
+.lang{display:flex;gap:10px;margin:18px 0 6px;flex-wrap:wrap}
+.lang a{font-weight:700;color:var(--green);text-decoration:none;border:2px solid var(--line);border-radius:999px;padding:4px 14px;background:var(--card)}
+.sum{background:var(--card);border:2px solid var(--line);border-radius:20px;padding:14px 20px;margin-top:20px}
+.sum ul{padding-left:20px;margin:6px 0}
+hr{border:0;border-top:2px solid var(--line);margin:48px 0}
+a{color:var(--green);overflow-wrap:anywhere}
+</style>
+</head>
+<body>
+<main>
+<section id="vi" lang="vi">
+<h1>Chính sách quyền riêng tư · Edu Quiz - Trắc nghiệm</h1>
+<p class="meta">Áp dụng từ 26/10/2026 · Ứng dụng: Edu Quiz - Trắc nghiệm (com.genzora.quiz) · Nhà phát triển: GENZORA COMPANY LIMITED</p>
+<nav class="lang"><a href="#vi">Tiếng Việt</a><a href="#en">English</a></nav>
+
+<div class="sum"><strong>Tóm tắt cho bố mẹ</strong>
+<ul>
+<li>Không cần tài khoản. Không có mua trong ứng dụng, gói đăng ký hay nội dung trả phí.</li>
+<li>Hồ sơ, tiến độ học và số lá non được lưu trên máy.</li>
+<li>Khi có mạng, bảng xếp hạng gửi tên hồ sơ, hình đại diện và điểm XP lên Google Firebase để hiện cho người chơi khác. Hãy giúp bé đặt biệt danh thay cho tên thật.</li>
+<li>Thống kê sử dụng gửi qua Google Analytics for Firebase không chứa tên và không dùng cho quảng cáo.</li>
+<li>Bản iPhone và iPad không có quảng cáo. Bản Android có quảng cáo Google AdMob dành cho trẻ em, không cá nhân hóa.</li>
+<li>Chúng tôi không bán dữ liệu.</li>
+</ul></div>
+
+<h2>1. Dữ liệu lưu trên máy</h2>
+<ul>
+<li>Hồ sơ: tên hồ sơ, hình đại diện, màu, lớp và môn đang học.</li>
+<li>Tiến độ: bài đã học, câu trả lời, điểm, sao, XP, chuỗi ngày học, quà mỗi ngày và số lá non.</li>
+<li>Cài đặt của ứng dụng, ví dụ âm thanh.</li>
+</ul>
+<p>Xóa hồ sơ trong ứng dụng hoặc gỡ ứng dụng là xóa các dữ liệu này khỏi máy.</p>
+
+<h2>2. Bảng xếp hạng trực tuyến</h2>
+<p>Khi máy có mạng, ứng dụng dùng Firebase Authentication (Google LLC) để tạo một mã người dùng ẩn danh, ngẫu nhiên cho lần cài đặt. Không cần email, số điện thoại hay mật khẩu. Sau mỗi bài học, ứng dụng gửi lên Cloud Firestore:</p>
+<ul>
+<li>tên hiển thị (là tên hồ sơ, đổi được ngay trong màn Xếp hạng), mã hình đại diện và màu;</li>
+<li>điểm XP, số bài đã học và số sao, tính theo ngày, theo tháng và toàn thời gian;</li>
+<li>mã ẩn danh, mã hồ sơ trên máy và thời điểm cập nhật.</li>
+</ul>
+<p>Tên, hình đại diện và điểm hiện trên bảng xếp hạng cho mọi người dùng ứng dụng. Không có trò chuyện hay nhắn tin giữa người chơi. Khi không có mạng, ứng dụng không gửi dữ liệu bảng xếp hạng.</p>
+
+<h2>3. Thống kê sử dụng (Google Analytics for Firebase)</h2>
+<p>Chúng tôi dùng Google Analytics for Firebase để biết bài nào dễ hay khó và màn hình nào hay gặp lỗi. Dữ liệu được gửi:</p>
+<ul>
+<li>Sự kiện trong ứng dụng: màn hình được mở; bài học bắt đầu, hoàn thành hay bỏ dở; lớp và môn; số câu hỏi, số lần trả lời và thời gian học.</li>
+<li>Thông tin Firebase tự thu: một mã ngẫu nhiên cho mỗi lần cài đặt, loại máy, phiên bản hệ điều hành và ứng dụng, ngôn ngữ, quốc gia ước lượng.</li>
+</ul>
+<p>Sự kiện không chứa tên, nội dung câu hỏi hay câu trả lời. Lưu trữ cho quảng cáo, dữ liệu người dùng cho quảng cáo và cá nhân hóa quảng cáo luôn bị tắt. Cách Google xử lý dữ liệu: <a href="https://firebase.google.com/support/privacy">firebase.google.com/support/privacy</a>.</p>
+
+<h2>4. Quảng cáo</h2>
+<ul>
+<li>iPhone và iPad: không có quảng cáo.</li>
+<li>Android: Google AdMob hiện quảng cáo xen giữa các bài và quảng cáo có thưởng (xem để nhận thêm lá non). Yêu cầu quảng cáo được đánh dấu dành cho trẻ em, giới hạn nội dung mức G và không cá nhân hóa. AdMob có thể xử lý mã quảng cáo, thông tin thiết bị, lượt hiển thị và tương tác để phân phối và đo lường quảng cáo. Xem <a href="https://policies.google.com/technologies/ads">policies.google.com/technologies/ads</a>.</li>
+</ul>
+
+<h2>5. Mua hàng</h2>
+<p>Phiên bản hiện tại không có mua trong ứng dụng, gói đăng ký hay nội dung trả phí. Lá non và XP chỉ nhận được khi học, nhận quà mỗi ngày, chờ lá mọc lại hoặc (trên Android) xem quảng cáo có thưởng.</p>
+
+<h2>6. Trẻ em</h2>
+<p>Edu Quiz dành cho học sinh tiểu học. Chúng tôi không hỏi tên thật, email, số điện thoại, ảnh, trường hay vị trí. Tên trên bảng xếp hạng do người dùng tự đặt; bố mẹ nên giúp bé chọn một biệt danh. Ứng dụng không có trò chuyện và không liên kết mạng xã hội.</p>
+
+<h2>7. Bên nhận dữ liệu và bảo mật</h2>
+<p>Dữ liệu ở mục 2, 3 và 4 do Google LLC xử lý (Firebase Authentication, Cloud Firestore, Google Analytics for Firebase, và AdMob trên Android). Apple và Google Play phân phối ứng dụng. Dữ liệu được gửi qua kết nối mã hóa (HTTPS). Chúng tôi không bán hay cho thuê dữ liệu.</p>
+
+<h2 id="xoa-du-lieu">8. Quyền của bạn và xóa dữ liệu</h2>
+<p>Bạn có thể đổi tên hiển thị bất cứ lúc nào trong màn Xếp hạng. Xóa hồ sơ hay gỡ ứng dụng không tự xóa bản ghi trên bảng xếp hạng. Để xóa tên và điểm khỏi bảng xếp hạng, hoặc hỏi về dữ liệu, hãy gửi email đến <a href="mailto:admin@genzora.com?subject=Edu%20Quiz%20data%20request">admin@genzora.com</a> với tiêu đề “Edu Quiz data request”, ghi tên hiển thị, điểm XP gần nhất và ngày chơi gần nhất. Cha mẹ hoặc người giám hộ có thể gửi yêu cầu thay trẻ. Chúng tôi xử lý yêu cầu trong vòng 30 ngày.</p>
+
+<h2>9. Thay đổi</h2>
+<p>Khi cách ứng dụng xử lý dữ liệu thay đổi, chúng tôi cập nhật trang này và ngày áp dụng ở đầu trang trước khi phát hành phiên bản mới.</p>
+
+<h2>10. Liên hệ</h2>
+<p>GENZORA COMPANY LIMITED · Email: <a href="mailto:admin@genzora.com">admin@genzora.com</a> · Trang hỗ trợ: <a href="../support/">Hỗ trợ</a></p>
+</section>
+
+<hr>
+
+<section id="en" lang="en">
+<h1>Privacy Policy · Edu Quiz - Trắc nghiệm</h1>
+<p class="meta">Effective October 26, 2026 · App: Edu Quiz - Trắc nghiệm (com.genzora.quiz) · Developer: GENZORA COMPANY LIMITED</p>
+
+<div class="sum"><strong>Summary for parents</strong>
+<ul>
+<li>No account needed. No in-app purchases, subscriptions or paid content.</li>
+<li>Profiles, learning progress and leaves are stored on the device.</li>
+<li>When online, the leaderboard sends the profile name, avatar and XP score to Google Firebase so other players can see them. Please help your child pick a nickname instead of a real name.</li>
+<li>Usage statistics sent through Google Analytics for Firebase contain no names and are not used for advertising.</li>
+<li>The iPhone and iPad version shows no ads. The Android version shows child-directed, non-personalized Google AdMob ads.</li>
+<li>We never sell data.</li>
+</ul></div>
+
+<h2>1. Data stored on the device</h2>
+<ul>
+<li>Profiles: profile name, avatar, color, grade and the subject being studied.</li>
+<li>Progress: lessons done, answers, scores, stars, XP, learning streak, daily gifts and leaves.</li>
+<li>App settings, such as sound.</li>
+</ul>
+<p>Deleting a profile in the app, or deleting the app, removes this data from the device.</p>
+
+<h2>2. Online leaderboard</h2>
+<p>When the device is online, the app uses Firebase Authentication (Google LLC) to create a random, anonymous user ID for the installation. No email, phone number or password is needed. After each lesson, the app sends to Cloud Firestore:</p>
+<ul>
+<li>the display name (the profile name, which can be changed on the Leaderboard screen), avatar ID and color;</li>
+<li>XP score, number of lessons and stars, per day, per month and all time;</li>
+<li>the anonymous ID, the profile ID on the device and the update time.</li>
+</ul>
+<p>The name, avatar and score appear on the leaderboard to everyone using the app. There is no chat or messaging between players. When the device is offline, no leaderboard data is sent.</p>
+
+<h2>3. Usage statistics (Google Analytics for Firebase)</h2>
+<p>We use Google Analytics for Firebase to learn which lessons are easy or hard and which screens have errors. It receives:</p>
+<ul>
+<li>App events: screens opened; lessons started, completed or abandoned; grade and subject; number of questions, answer attempts and time spent.</li>
+<li>What Firebase collects by itself: a random ID for each installation, device model, operating system and app version, language and approximate country.</li>
+</ul>
+<p>Events contain no names, question text or answers. Ad storage, ad user data and ad personalization are always turned off. How Google handles the data: <a href="https://firebase.google.com/support/privacy">firebase.google.com/support/privacy</a>.</p>
+
+<h2>4. Advertising</h2>
+<ul>
+<li>iPhone and iPad: no ads.</li>
+<li>Android: Google AdMob shows ads between lessons and rewarded ads (watch to get more leaves). Ad requests are tagged as child-directed, limited to G-rated content and non-personalized. AdMob may process the advertising ID, device information, impressions and interactions to deliver and measure ads. See <a href="https://policies.google.com/technologies/ads">policies.google.com/technologies/ads</a>.</li>
+</ul>
+
+<h2>5. Purchases</h2>
+<p>The current version has no in-app purchases, subscriptions or paid content. Leaves and XP are only earned by learning, opening the daily gift, waiting for leaves to regrow or (on Android) watching a rewarded ad.</p>
+
+<h2>6. Children</h2>
+<p>Edu Quiz is made for primary-school students. We do not ask for a real name, email, phone number, photo, school or location. The leaderboard name is chosen by the user; parents should help their child pick a nickname. The app has no chat and no social media links.</p>
+
+<h2>7. Who receives data, and security</h2>
+<p>The data in sections 2, 3 and 4 is processed by Google LLC (Firebase Authentication, Cloud Firestore, Google Analytics for Firebase, and AdMob on Android). Apple and Google Play distribute the app. Data is sent over encrypted connections (HTTPS). We do not sell or rent data.</p>
+
+<h2 id="delete-data">8. Your choices and data deletion</h2>
+<p>You can change the display name at any time on the Leaderboard screen. Deleting a profile or the app does not remove leaderboard records. To remove a name and score from the leaderboard, or for any question about your data, email <a href="mailto:admin@genzora.com?subject=Edu%20Quiz%20data%20request">admin@genzora.com</a> with the subject “Edu Quiz data request” and include the display name, the latest XP score and the last day played. A parent or guardian may ask on a child's behalf. We handle requests within 30 days.</p>
+
+<h2>9. Changes</h2>
+<p>If the way the app handles data changes, we will update this page and its effective date before the new version is released.</p>
+
+<h2>10. Contact</h2>
+<p>GENZORA COMPANY LIMITED · Email: <a href="mailto:admin@genzora.com">admin@genzora.com</a> · Support: <a href="../support/">Support</a></p>
+</section>
+</main>
+</body>
+</html>
