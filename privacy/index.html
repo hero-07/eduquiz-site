@@ -55,7 +55,7 @@ a{color:var(--green);overflow-wrap:anywhere}
 <li>điểm XP, số bài đã học và số sao, tính theo ngày, theo tháng và toàn thời gian;</li>
 <li>mã ẩn danh, mã hồ sơ trên máy và thời điểm cập nhật.</li>
 </ul>
-<p>Vườn khủng long: khi hồ sơ đã nở được khủng long con, ứng dụng gửi lên Cloud Firestore tên hiển thị, mã hình đại diện và màu (như bảng xếp hạng), danh sách khủng long con với số tim của từng bé, bé đang đi cùng, mã ẩn danh và thời điểm cập nhật, để người chơi khác ghé xem vườn. Người ghé thăm chỉ xem và thả tim; ứng dụng đếm số lượt ghé và số tim của mỗi vườn. Không có trò chuyện hay nhắn tin.</p>
+<p>Vườn khủng long: khi hồ sơ đã nở được khủng long con, ứng dụng gửi lên Cloud Firestore tên hiển thị, mã hình đại diện và màu (như bảng xếp hạng), danh sách khủng long con với số tim và đồ đang mặc của từng bé, đồ trang trí trong vườn, bé đang đi cùng, mã ẩn danh và thời điểm cập nhật, để người chơi khác ghé xem vườn. Người ghé thăm chỉ xem và thả tim; ứng dụng đếm số lượt ghé và số tim của mỗi vườn. Không có trò chuyện hay nhắn tin.</p>
 <p>Tên, hình đại diện và điểm hiện trên bảng xếp hạng cho mọi người dùng ứng dụng. Không có trò chuyện hay nhắn tin giữa người chơi. Khi không có mạng, ứng dụng không gửi dữ liệu bảng xếp hạng.</p>
 
 <h2>3. Thống kê sử dụng (Google Analytics for Firebase)</h2>
@@ -63,8 +63,10 @@ a{color:var(--green);overflow-wrap:anywhere}
 <ul>
 <li>Sự kiện trong ứng dụng: màn hình được mở; bài học bắt đầu, hoàn thành hay bỏ dở; lớp và môn; số câu hỏi, số lần trả lời và thời gian học.</li>
 <li>Khảo sát làm quen khi mở ứng dụng lần đầu: các lựa chọn đã chọn (người học là học sinh, sinh viên, bố mẹ hay thầy cô; lớp hoặc cấp học, từ mầm non đến đại học, và lớp muốn ôn; môn; cách thích chơi; mức học; mục tiêu; điều thấy khó; tính năng mong muốn; số phút học mỗi ngày; cách học thêm; nơi biết đến ứng dụng), câu nào được bỏ qua và thời gian làm khảo sát. Khảo sát không hỏi tên hay thông tin liên lạc.</li>
-<li>Công viên khủng long: trò chơi được mở, bắt đầu và thắng; trên Android, lượt xem quảng cáo có thưởng.</li>
-<li>Trại ấp trứng: trứng được mua và nở, khủng long con được cho ăn và được chọn đi cùng bé.</li>
+<li>Công viên khủng long: trò chơi được mở, bắt đầu và thắng; màn chơi xong hay bỏ dở, điểm của ván và thời gian chơi; gợi ý được dùng; hướng dẫn cách chơi được xem; trên Android, lời mời xem quảng cáo có thưởng được nhận hay bỏ qua.</li>
+<li>Giữ tổ trứng: màn được chơi, thắng, thua hay bỏ dở, số trứng giữ được, số câu tính đúng và sai, thời gian chơi.</li>
+<li>Trại ấp trứng: trứng được mua và nở, khủng long con được cho ăn, lớn lên và được chọn đi cùng bé; đồ được mua và mặc cho bé; gợi ý và lượt đỡ câu sai của bé trong bài học.</li>
+<li>Nhiệm vụ hằng ngày: nhiệm vụ hoàn thành, được nhận thưởng hay được đổi; rương được mở và phần thưởng quay được.</li>
 <li>Thông tin Firebase tự thu: một mã ngẫu nhiên cho mỗi lần cài đặt, loại máy, phiên bản hệ điều hành và ứng dụng, ngôn ngữ, quốc gia ước lượng.</li>
 </ul>
 <p>Sự kiện không chứa tên, nội dung câu hỏi hay câu trả lời trong bài học. Lưu trữ cho quảng cáo, dữ liệu người dùng cho quảng cáo và cá nhân hóa quảng cáo luôn bị tắt. Cách Google xử lý dữ liệu: <a href="https://firebase.google.com/support/privacy">firebase.google.com/support/privacy</a>.</p>
@@ -76,7 +78,7 @@ a{color:var(--green);overflow-wrap:anywhere}
 </ul>
 
 <h2>5. Mua hàng</h2>
-<p>Phiên bản hiện tại không có mua trong ứng dụng, gói đăng ký hay nội dung trả phí. Lá non và XP chỉ nhận được khi học, nhận quà mỗi ngày, chờ lá mọc lại hoặc (trên Android) xem quảng cáo có thưởng.</p>
+<p>Phiên bản hiện tại không có mua trong ứng dụng, gói đăng ký hay nội dung trả phí. Lá non và XP chỉ nhận được khi học, thắng trò chơi trong công viên hay Giữ tổ trứng, làm nhiệm vụ hằng ngày, nhận quà mỗi ngày, chờ lá mọc lại hoặc (trên Android) xem quảng cáo có thưởng.</p>
 
 <h2>6. Trẻ em</h2>
 <p>Edu Quiz dành cho học sinh tiểu học. Chúng tôi không hỏi tên thật, email, số điện thoại, ảnh, trường hay vị trí. Tên trên bảng xếp hạng do người dùng tự đặt; bố mẹ nên giúp bé chọn một biệt danh. Ứng dụng không có trò chuyện và không liên kết mạng xã hội.</p>
@@ -125,7 +127,7 @@ a{color:var(--green);overflow-wrap:anywhere}
 <li>XP score, number of lessons and stars, per day, per month and all time;</li>
 <li>the anonymous ID, the profile ID on the device and the update time.</li>
 </ul>
-<p>Dino gardens: once a profile has hatched a baby dinosaur, the app sends to Cloud Firestore the display name, avatar ID and color (as for the leaderboard), the list of baby dinosaurs with each one's hearts, the companion, the anonymous ID and the update time, so other players can visit the garden. Visitors can only look and send a heart; the app counts each garden's visits and hearts. There is no chat or messaging.</p>
+<p>Dino gardens: once a profile has hatched a baby dinosaur, the app sends to Cloud Firestore the display name, avatar ID and color (as for the leaderboard), the list of baby dinosaurs with each one's hearts and what it wears, the garden's decorations, the companion, the anonymous ID and the update time, so other players can visit the garden. Visitors can only look and send a heart; the app counts each garden's visits and hearts. There is no chat or messaging.</p>
 <p>The name, avatar and score appear on the leaderboard to everyone using the app. There is no chat or messaging between players. When the device is offline, no leaderboard data is sent.</p>
 
 <h2>3. Usage statistics (Google Analytics for Firebase)</h2>
@@ -133,8 +135,10 @@ a{color:var(--green);overflow-wrap:anywhere}
 <ul>
 <li>App events: screens opened; lessons started, completed or abandoned; grade and subject; number of questions, answer attempts and time spent.</li>
 <li>The welcome survey on first launch: the options picked (whether the learner is a pupil, a student, a parent or a teacher; grade or school level, from preschool to university, and the grade to practise; subjects; play style; level; goal; difficulties; wanted features; daily minutes; other ways of learning; how they heard of the app), which questions were skipped and how long it took. The survey asks for no name or contact details.</li>
-<li>Dino Park: games opened, started and won; on Android, rewarded ads watched.</li>
-<li>Egg hatchery: eggs bought and hatched, baby dinosaurs fed and chosen as the companion.</li>
+<li>Dino Park: games opened, started and won; levels finished or left, a game's score and time played; hints used; how-to-play cards viewed; on Android, rewarded ad offers taken or declined.</li>
+<li>Egg Guard: levels played, won, lost or left, eggs kept, sums answered right and wrong, time played.</li>
+<li>Egg hatchery: eggs bought and hatched, baby dinosaurs fed, grown up and chosen as the companion; things bought and worn; the companion's hints and caught wrong answers in lessons.</li>
+<li>Daily missions: missions done, claimed or swapped; chests opened and the prizes spun.</li>
 <li>What Firebase collects by itself: a random ID for each installation, device model, operating system and app version, language and approximate country.</li>
 </ul>
 <p>Events contain no names, question text or lesson answers. Ad storage, ad user data and ad personalization are always turned off. How Google handles the data: <a href="https://firebase.google.com/support/privacy">firebase.google.com/support/privacy</a>.</p>
@@ -146,7 +150,7 @@ a{color:var(--green);overflow-wrap:anywhere}
 </ul>
 
 <h2>5. Purchases</h2>
-<p>The current version has no in-app purchases, subscriptions or paid content. Leaves and XP are only earned by learning, opening the daily gift, waiting for leaves to regrow or (on Android) watching a rewarded ad.</p>
+<p>The current version has no in-app purchases, subscriptions or paid content. Leaves and XP are only earned by learning, winning games in the park or Egg Guard, doing daily missions, opening the daily gift, waiting for leaves to regrow or (on Android) watching a rewarded ad.</p>
 
 <h2>6. Children</h2>
 <p>Edu Quiz is made for primary-school students. We do not ask for a real name, email, phone number, photo, school or location. The leaderboard name is chosen by the user; parents should help their child pick a nickname. The app has no chat and no social media links.</p>
