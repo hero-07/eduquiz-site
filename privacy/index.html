@@ -27,7 +27,7 @@ a{color:var(--green);overflow-wrap:anywhere}
 <main>
 <section id="vi" lang="vi">
 <h1>Chính sách quyền riêng tư · Edu Quiz - Trắc nghiệm</h1>
-<p class="meta">Áp dụng từ 29/10/2026 · Ứng dụng: Edu Quiz - Trắc nghiệm (com.genzora.quiz) · Nhà phát triển: GENZORA COMPANY LIMITED</p>
+<p class="meta">Áp dụng từ 07/11/2026 · Ứng dụng: Edu Quiz - Trắc nghiệm (com.genzora.quiz) · Nhà phát triển: GENZORA COMPANY LIMITED</p>
 <nav class="lang"><a href="#vi">Tiếng Việt</a><a href="#en">English</a></nav>
 
 <div class="sum"><strong>Tóm tắt cho bố mẹ</strong>
@@ -35,6 +35,8 @@ a{color:var(--green);overflow-wrap:anywhere}
 <li>Không cần tài khoản. Không có mua trong ứng dụng, gói đăng ký hay nội dung trả phí.</li>
 <li>Hồ sơ, tiến độ học và số lá non được lưu trên máy.</li>
 <li>Khi có mạng, bảng xếp hạng gửi tên hồ sơ, hình đại diện và điểm XP lên Google Firebase để hiện cho người chơi khác. Hãy giúp bé đặt biệt danh thay cho tên thật.</li>
+<li>Thầy cô có thể mở lớp, giao bài và xem điểm: tên các em tự ghi khi vào lớp hay làm bài, cùng điểm bài làm, được gửi lên Google Firebase để thầy cô xem.</li>
+<li>Tạo quiz từ PDF hay ảnh chụp: tệp chỉ được gửi tới máy chủ và Google Gemini sau khi người dùng đồng ý; với học sinh dưới lớp 10, người lớn phải mở khoá trước.</li>
 <li>Thống kê sử dụng gửi qua Google Analytics for Firebase không chứa tên và không dùng cho quảng cáo.</li>
 <li>Bản iPhone và iPad không có quảng cáo. Bản Android có quảng cáo Google AdMob dành cho trẻ em, không cá nhân hóa.</li>
 <li>Chúng tôi không bán dữ liệu.</li>
@@ -56,8 +58,24 @@ a{color:var(--green);overflow-wrap:anywhere}
 <li>mã ẩn danh, mã hồ sơ trên máy và thời điểm cập nhật.</li>
 </ul>
 <p>Vườn khủng long: khi hồ sơ đã nở được khủng long con, ứng dụng gửi lên Cloud Firestore tên hiển thị, mã hình đại diện và màu (như bảng xếp hạng), danh sách khủng long con với số tim và đồ đang mặc của từng bé, đồ trang trí trong vườn, bé đang đi cùng, mã ẩn danh và thời điểm cập nhật, để người chơi khác ghé xem vườn. Người ghé thăm chỉ xem và thả tim; ứng dụng đếm số lượt ghé và số tim của mỗi vườn. Không có trò chuyện hay nhắn tin.</p>
-<p>Bài tập: khi thầy cô hoặc phụ huynh giao bài, ứng dụng lưu lên Cloud Firestore một mã bài tập gồm 6 ký tự, danh sách các bài học được chọn và mã ẩn danh của người giao, rồi tạo một đường link để gửi. Ai có link hoặc mã đều mở được danh sách bài này. Bài tập không chứa tên, lời nhắn hay nội dung tự viết nào. Khi học sinh mở link, ứng dụng chỉ đọc danh sách bài; kết quả làm bài vẫn được lưu trên thiết bị.</p>
+<p>Bài tập: khi thầy cô hoặc phụ huynh giao bài, ứng dụng lưu lên Cloud Firestore một mã bài tập gồm 6 ký tự, mã ẩn danh của người giao và nội dung bài, rồi tạo một đường link để gửi. Ai có link hoặc mã đều mở được bài này.</p>
+<ul>
+<li>Bài là danh sách bài học trong lộ trình: bài tập chỉ chứa danh sách đó; kết quả làm bài được lưu trên thiết bị.</li>
+<li>Bài là bộ câu hỏi thầy cô tự soạn: bài tập chứa tiêu đề, các câu hỏi, lựa chọn và đáp án. Ứng dụng lọc từ ngữ không phù hợp khi soạn và khi mở bài.</li>
+<li>Khi học sinh làm bộ câu hỏi thầy cô giao và ghi tên, ứng dụng gửi lên tên đã ghi (tối đa 24 ký tự), số câu đúng ở lần tốt nhất và lần đầu, tổng số câu, thời gian làm, số lần làm và mã ẩn danh, để thầy cô xem điểm.</li>
+<li>Người làm bài có thể báo cáo một bộ câu hỏi: ứng dụng gửi mã bài, lý do, mã ẩn danh của người soạn và của người báo cáo, và ẩn bài đó trên máy. Chặn người soạn chỉ lưu trên máy, không gửi đi.</li>
+</ul>
+<p>Lớp học: khi thầy cô mở lớp, ứng dụng lưu lên Cloud Firestore tên lớp, khối, mã lớp và mã ẩn danh của thầy cô. Khi học sinh vào lớp bằng mã, ứng dụng gửi tên em ghi và mã ẩn danh để tên hiện trong danh sách lớp của thầy cô. Bài giao cho lớp lưu mã bài, tên bài, số câu và hạn nộp.</p>
+<p>Chơi trực tiếp: khi thầy cô mở một phòng chơi, ứng dụng lưu câu hỏi và tiến trình của phòng; mỗi học sinh vào phòng gửi tên em ghi (tối đa 16 ký tự), câu trả lời, điểm và mã ẩn danh, để cả phòng thấy bảng điểm.</p>
+<p>Ảnh của thầy cô: thầy cô có thể thêm ảnh của mình vào câu hỏi. Ảnh được thu nhỏ (JPEG, cạnh dài tối đa 640 điểm ảnh) và lưu trong Firebase Cloud Storage để máy của học sinh tải về. Không nên dùng ảnh có người hay thông tin cá nhân.</p>
 <p>Tạo quiz từ tài liệu: khi người dùng chọn một tệp PDF, ảnh hoặc tài liệu (như tệp Word) để tạo quiz, ứng dụng tải tệp lên Firebase (Cloud Storage và Cloud Functions) cùng mã ẩn danh, và máy chủ gửi nội dung tệp tới Google Gemini API để đọc và soạn câu hỏi. Tệp được xoá sau khi xử lý xong; các câu hỏi soạn được lưu trong Cloud Firestore cùng yêu cầu tạo quiz để ứng dụng lấy về, và được lưu trên thiết bị. Câu hỏi người dùng tự soạn hoặc tự sửa chỉ lưu trên thiết bị. Không nên chọn tệp có thông tin cá nhân.</p>
+<ul>
+<li>Trước tệp đầu tiên, ứng dụng giải thích tệp sẽ được gửi tới máy chủ và Google Gemini và hỏi ý kiến đồng ý. Với học sinh dưới lớp 10, người lớn phải qua bước kiểm tra dành cho phụ huynh trước. Có thể rút lại đồng ý ngay trong màn tạo quiz; lựa chọn này chỉ lưu trên máy.</li>
+<li>Tên tệp thật không được gửi đi; máy chủ chỉ nhận nội dung tệp, loại tệp và số câu muốn tạo.</li>
+<li>Máy chủ dùng bộ lọc an toàn của Gemini và từ chối tài liệu không phù hợp với trẻ em.</li>
+<li>Mỗi câu do AI soạn có nút Báo cáo: ứng dụng gửi nội dung câu đó, lý do và mã ẩn danh. Câu bị báo là không phù hợp được xoá khỏi máy ngay.</li>
+</ul>
+<p>Ứng dụng có thể hiện thẻ giới thiệu EduQuiz Lớp Học cho học sinh lớp 10–12; mở trang đó phải qua bước kiểm tra dành cho phụ huynh, và không có dữ liệu nào được gửi kèm.</p>
 <p>Tên, hình đại diện và điểm hiện trên bảng xếp hạng cho mọi người dùng ứng dụng. Không có trò chuyện hay nhắn tin giữa người chơi. Khi không có mạng, ứng dụng không gửi dữ liệu bảng xếp hạng.</p>
 
 <h2>3. Thống kê sử dụng (Google Analytics for Firebase)</h2>
@@ -69,6 +87,7 @@ a{color:var(--green);overflow-wrap:anywhere}
 <li>Giữ tổ trứng: màn được chơi, thắng, thua hay bỏ dở, số trứng giữ được, số câu tính đúng và sai, thời gian chơi.</li>
 <li>Trại ấp trứng: trứng được mua và nở, khủng long con được cho ăn, lớn lên và được chọn đi cùng bé; đồ được mua và mặc cho bé; gợi ý và lượt đỡ câu sai của bé trong bài học.</li>
 <li>Nhiệm vụ hằng ngày: nhiệm vụ hoàn thành, được nhận thưởng hay được đổi; rương được mở và phần thưởng quay được.</li>
+<li>Lớp học, bài tập, chơi trực tiếp, tạo quiz, thẻ ghi nhớ, khoá học và chuỗi ngày học: tính năng được mở, dùng, hoàn thành hay bỏ dở, và lựa chọn đồng ý hay không trước khi tạo quiz bằng AI.</li>
 <li>Thông tin Firebase tự thu: một mã ngẫu nhiên cho mỗi lần cài đặt, loại máy, phiên bản hệ điều hành và ứng dụng, ngôn ngữ, quốc gia ước lượng.</li>
 </ul>
 <p>Sự kiện không chứa tên, nội dung câu hỏi hay câu trả lời trong bài học. Lưu trữ cho quảng cáo, dữ liệu người dùng cho quảng cáo và cá nhân hóa quảng cáo luôn bị tắt. Cách Google xử lý dữ liệu: <a href="https://firebase.google.com/support/privacy">firebase.google.com/support/privacy</a>.</p>
@@ -83,13 +102,13 @@ a{color:var(--green);overflow-wrap:anywhere}
 <p>Phiên bản hiện tại không có mua trong ứng dụng, gói đăng ký hay nội dung trả phí. Lá non và XP chỉ nhận được khi học, thắng trò chơi trong công viên hay Giữ tổ trứng, làm nhiệm vụ hằng ngày, nhận quà mỗi ngày, chờ lá mọc lại hoặc (trên Android) xem quảng cáo có thưởng.</p>
 
 <h2>6. Trẻ em</h2>
-<p>Edu Quiz dành cho học sinh tiểu học. Chúng tôi không hỏi tên thật, email, số điện thoại, ảnh, trường hay vị trí. Tên trên bảng xếp hạng do người dùng tự đặt; bố mẹ nên giúp bé chọn một biệt danh. Ứng dụng không có trò chuyện và không liên kết mạng xã hội.</p>
+<p>Edu Quiz dành cho học sinh tiểu học. Chúng tôi không hỏi email, số điện thoại, ảnh, trường hay vị trí. Tên trên bảng xếp hạng do người dùng tự đặt; bố mẹ nên giúp bé chọn một biệt danh. Khi vào lớp hay làm bài thầy cô giao, các em tự ghi tên để thầy cô nhận ra; tên này hiện trong danh sách lớp và bảng điểm của thầy cô. Ứng dụng không có trò chuyện và không liên kết mạng xã hội.</p>
 
 <h2>7. Bên nhận dữ liệu và bảo mật</h2>
-<p>Dữ liệu ở mục 2, 3 và 4 do Google LLC xử lý (Firebase Authentication, Cloud Firestore, Google Analytics for Firebase, và AdMob trên Android). Apple và Google Play phân phối ứng dụng. Dữ liệu được gửi qua kết nối mã hóa (HTTPS). Chúng tôi không bán hay cho thuê dữ liệu.</p>
+<p>Dữ liệu ở mục 2, 3 và 4 do Google LLC xử lý (Firebase Authentication, Cloud Firestore, Cloud Storage, Cloud Functions, Google Gemini API, Google Analytics for Firebase, và AdMob trên Android). Apple và Google Play phân phối ứng dụng. Dữ liệu được gửi qua kết nối mã hóa (HTTPS). Chúng tôi không bán hay cho thuê dữ liệu.</p>
 
 <h2 id="xoa-du-lieu">8. Quyền của bạn và xóa dữ liệu</h2>
-<p>Bạn có thể đổi tên hiển thị bất cứ lúc nào trong màn Xếp hạng. Xóa hồ sơ hay gỡ ứng dụng không tự xóa bản ghi trên bảng xếp hạng. Để xóa tên và điểm khỏi bảng xếp hạng, hoặc hỏi về dữ liệu, hãy gửi email đến <a href="mailto:admin@genzora.com?subject=Edu%20Quiz%20data%20request">admin@genzora.com</a> với tiêu đề “Edu Quiz data request”, ghi tên hiển thị, điểm XP gần nhất và ngày chơi gần nhất. Cha mẹ hoặc người giám hộ có thể gửi yêu cầu thay trẻ. Chúng tôi xử lý yêu cầu trong vòng 30 ngày.</p>
+<p>Bạn có thể đổi tên hiển thị bất cứ lúc nào trong màn Xếp hạng. Xóa hồ sơ hay gỡ ứng dụng không tự xóa bản ghi trên bảng xếp hạng. Để xóa tên và điểm khỏi bảng xếp hạng, hoặc hỏi về dữ liệu, hãy gửi email đến <a href="mailto:admin@genzora.com?subject=Edu%20Quiz%20data%20request">admin@genzora.com</a> với tiêu đề “Edu Quiz data request”, ghi tên hiển thị, điểm XP gần nhất và ngày chơi gần nhất. Để xoá lớp, bài tập, điểm, ảnh hay câu hỏi đã gửi lên, hãy ghi thêm mã lớp hoặc mã bài. Cha mẹ hoặc người giám hộ có thể gửi yêu cầu thay trẻ. Chúng tôi xử lý yêu cầu trong vòng 30 ngày.</p>
 
 <h2>9. Thay đổi</h2>
 <p>Khi cách ứng dụng xử lý dữ liệu thay đổi, chúng tôi cập nhật trang này và ngày áp dụng ở đầu trang trước khi phát hành phiên bản mới.</p>
@@ -102,13 +121,15 @@ a{color:var(--green);overflow-wrap:anywhere}
 
 <section id="en" lang="en">
 <h1>Privacy Policy · Edu Quiz - Trắc nghiệm</h1>
-<p class="meta">Effective October 29, 2026 · App: Edu Quiz - Trắc nghiệm (com.genzora.quiz) · Developer: GENZORA COMPANY LIMITED</p>
+<p class="meta">Effective November 7, 2026 · App: Edu Quiz - Trắc nghiệm (com.genzora.quiz) · Developer: GENZORA COMPANY LIMITED</p>
 
 <div class="sum"><strong>Summary for parents</strong>
 <ul>
 <li>No account needed. No in-app purchases, subscriptions or paid content.</li>
 <li>Profiles, learning progress and leaves are stored on the device.</li>
 <li>When online, the leaderboard sends the profile name, avatar and XP score to Google Firebase so other players can see them. Please help your child pick a nickname instead of a real name.</li>
+<li>Teachers can open classes, give homework and see scores: the name a pupil types when joining a class or doing homework, and the score, are sent to Google Firebase for the teacher.</li>
+<li>Quizzes from PDFs or photos: a file is sent to our server and Google Gemini only after the user agrees; below grade 10 an adult must unlock it first.</li>
 <li>Usage statistics sent through Google Analytics for Firebase contain no names and are not used for advertising.</li>
 <li>The iPhone and iPad version shows no ads. The Android version shows child-directed, non-personalized Google AdMob ads.</li>
 <li>We never sell data.</li>
@@ -130,8 +151,24 @@ a{color:var(--green);overflow-wrap:anywhere}
 <li>the anonymous ID, the profile ID on the device and the update time.</li>
 </ul>
 <p>Dino gardens: once a profile has hatched a baby dinosaur, the app sends to Cloud Firestore the display name, avatar ID and color (as for the leaderboard), the list of baby dinosaurs with each one's hearts and what it wears, the garden's decorations, the companion, the anonymous ID and the update time, so other players can visit the garden. Visitors can only look and send a heart; the app counts each garden's visits and hearts. There is no chat or messaging.</p>
-<p>Homework: when a teacher or parent assigns lessons, the app stores in Cloud Firestore a six-character code, the list of chosen lessons and the assigner's anonymous ID, and makes a link to send. Anyone with the link or the code can open that list. An assignment holds no names, messages or other typed text. When a student opens the link, the app only reads the list; their results stay on the device.</p>
+<p>Homework: when a teacher or parent gives homework, the app stores in Cloud Firestore a six-character code, the giver's anonymous ID and the homework itself, and makes a link to send. Anyone with the link or the code can open it.</p>
+<ul>
+<li>Lessons from the learning path: the homework holds only the list of lessons; results stay on the device.</li>
+<li>A quiz the teacher wrote: the homework holds its title, questions, choices and answers. The app filters unsuitable words when the quiz is made and when it is opened.</li>
+<li>When a pupil does a quiz a teacher gave and types a name, the app sends that name (up to 24 characters), the number right in the best and the first try, the number of questions, the time taken, the number of tries and the anonymous ID, so the teacher can see the score.</li>
+<li>Anyone doing a quiz can report it: the app sends its code, the reason, and the anonymous IDs of its maker and of the reporter, and hides it on the device. Blocking a maker is stored on the device only and nothing is sent.</li>
+</ul>
+<p>Classes: when a teacher opens a class, the app stores in Cloud Firestore the class name, grade, class code and the teacher's anonymous ID. When a pupil joins with the code, the app sends the name they type and their anonymous ID, so the name appears in the teacher's class list. Homework given to a class stores its code, title, number of questions and due date.</p>
+<p>Live games: when a teacher opens a live room, the app stores its questions and progress; each pupil who joins sends the name they type (up to 16 characters), their answers, score and anonymous ID, so the room can show the scores.</p>
+<p>Teachers' pictures: a teacher can add their own pictures to questions. Pictures are made smaller (JPEG, at most 640 pixels on the long side) and stored in Firebase Cloud Storage so pupils' devices can download them. Please do not use pictures of people or with personal information.</p>
 <p>Quizzes from documents: when a user picks a PDF, a photo or a document (such as a Word file) to make a quiz, the app uploads the file to Firebase (Cloud Storage and Cloud Functions) with the anonymous ID, and the server sends its content to the Google Gemini API to read it and write questions. The file is deleted once it has been processed; the questions written are stored in Cloud Firestore with the quiz request so the app can fetch them, and kept on the device. Questions a user writes or edits by hand stay on the device. Please do not pick files that contain personal information.</p>
+<ul>
+<li>Before the first file, the app explains that it will go to our server and Google Gemini and asks for consent. Below grade 10, an adult must pass a parental check first. Consent can be withdrawn on the quiz maker screen; the choice is stored on the device only.</li>
+<li>The real file name is not sent; the server only receives the file's content, its type and the number of questions wanted.</li>
+<li>The server uses Gemini's safety filters and refuses material unsuitable for children.</li>
+<li>Every AI-written question has a Report button: the app sends that question, the reason and the anonymous ID. A question reported as unsuitable is removed from the device at once.</li>
+</ul>
+<p>The app may show a card about EduQuiz Lớp Học to students in grades 10–12; opening that site requires a parental check, and no data is sent with it.</p>
 <p>The name, avatar and score appear on the leaderboard to everyone using the app. There is no chat or messaging between players. When the device is offline, no leaderboard data is sent.</p>
 
 <h2>3. Usage statistics (Google Analytics for Firebase)</h2>
@@ -143,6 +180,7 @@ a{color:var(--green);overflow-wrap:anywhere}
 <li>Egg Guard: levels played, won, lost or left, eggs kept, sums answered right and wrong, time played.</li>
 <li>Egg hatchery: eggs bought and hatched, baby dinosaurs fed, grown up and chosen as the companion; things bought and worn; the companion's hints and caught wrong answers in lessons.</li>
 <li>Daily missions: missions done, claimed or swapped; chests opened and the prizes spun.</li>
+<li>Classes, homework, live games, the quiz maker, flashcards, courses and learning streaks: features opened, used, finished or left, and whether consent was given before an AI quiz.</li>
 <li>What Firebase collects by itself: a random ID for each installation, device model, operating system and app version, language and approximate country.</li>
 </ul>
 <p>Events contain no names, question text or lesson answers. Ad storage, ad user data and ad personalization are always turned off. How Google handles the data: <a href="https://firebase.google.com/support/privacy">firebase.google.com/support/privacy</a>.</p>
@@ -157,13 +195,13 @@ a{color:var(--green);overflow-wrap:anywhere}
 <p>The current version has no in-app purchases, subscriptions or paid content. Leaves and XP are only earned by learning, winning games in the park or Egg Guard, doing daily missions, opening the daily gift, waiting for leaves to regrow or (on Android) watching a rewarded ad.</p>
 
 <h2>6. Children</h2>
-<p>Edu Quiz is made for primary-school students. We do not ask for a real name, email, phone number, photo, school or location. The leaderboard name is chosen by the user; parents should help their child pick a nickname. The app has no chat and no social media links.</p>
+<p>Edu Quiz is made for primary-school students. We do not ask for an email, phone number, photo, school or location. The leaderboard name is chosen by the user; parents should help their child pick a nickname. When joining a class or doing homework from a teacher, pupils type a name so the teacher knows who they are; it appears in the teacher's class list and scores. The app has no chat and no social media links.</p>
 
 <h2>7. Who receives data, and security</h2>
-<p>The data in sections 2, 3 and 4 is processed by Google LLC (Firebase Authentication, Cloud Firestore, Google Analytics for Firebase, and AdMob on Android). Apple and Google Play distribute the app. Data is sent over encrypted connections (HTTPS). We do not sell or rent data.</p>
+<p>The data in sections 2, 3 and 4 is processed by Google LLC (Firebase Authentication, Cloud Firestore, Cloud Storage, Cloud Functions, the Google Gemini API, Google Analytics for Firebase, and AdMob on Android). Apple and Google Play distribute the app. Data is sent over encrypted connections (HTTPS). We do not sell or rent data.</p>
 
 <h2 id="delete-data">8. Your choices and data deletion</h2>
-<p>You can change the display name at any time on the Leaderboard screen. Deleting a profile or the app does not remove leaderboard records. To remove a name and score from the leaderboard, or for any question about your data, email <a href="mailto:admin@genzora.com?subject=Edu%20Quiz%20data%20request">admin@genzora.com</a> with the subject “Edu Quiz data request” and include the display name, the latest XP score and the last day played. A parent or guardian may ask on a child's behalf. We handle requests within 30 days.</p>
+<p>You can change the display name at any time on the Leaderboard screen. Deleting a profile or the app does not remove leaderboard records. To remove a name and score from the leaderboard, or for any question about your data, email <a href="mailto:admin@genzora.com?subject=Edu%20Quiz%20data%20request">admin@genzora.com</a> with the subject “Edu Quiz data request” and include the display name, the latest XP score and the last day played. To delete a class, homework, scores, pictures or questions that were sent, include the class or homework code. A parent or guardian may ask on a child's behalf. We handle requests within 30 days.</p>
 
 <h2>9. Changes</h2>
 <p>If the way the app handles data changes, we will update this page and its effective date before the new version is released.</p>
