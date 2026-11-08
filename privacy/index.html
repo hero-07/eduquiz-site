@@ -27,7 +27,7 @@ a{color:var(--green);overflow-wrap:anywhere}
 <main>
 <section id="vi" lang="vi">
 <h1>Chính sách quyền riêng tư · Edu Quiz - Trắc nghiệm</h1>
-<p class="meta">Áp dụng từ 07/11/2026 · Ứng dụng: Edu Quiz - Trắc nghiệm (com.genzora.quiz) · Nhà phát triển: GENZORA COMPANY LIMITED</p>
+<p class="meta">Áp dụng từ 08/11/2026 · Ứng dụng: Edu Quiz - Trắc nghiệm (com.genzora.quiz) · Nhà phát triển: GENZORA COMPANY LIMITED</p>
 <nav class="lang"><a href="#vi">Tiếng Việt</a><a href="#en">English</a></nav>
 
 <div class="sum"><strong>Tóm tắt cho bố mẹ</strong>
@@ -68,7 +68,7 @@ a{color:var(--green);overflow-wrap:anywhere}
 <p>Lớp học: khi thầy cô mở lớp, ứng dụng lưu lên Cloud Firestore tên lớp, khối, mã lớp và mã ẩn danh của thầy cô. Khi học sinh vào lớp bằng mã, ứng dụng gửi tên em ghi và mã ẩn danh để tên hiện trong danh sách lớp của thầy cô. Bài giao cho lớp lưu mã bài, tên bài, số câu và hạn nộp.</p>
 <p>Chơi trực tiếp: khi thầy cô mở một phòng chơi, ứng dụng lưu câu hỏi và tiến trình của phòng; mỗi học sinh vào phòng gửi tên em ghi (tối đa 16 ký tự), câu trả lời, điểm và mã ẩn danh, để cả phòng thấy bảng điểm.</p>
 <p>Ảnh của thầy cô: thầy cô có thể thêm ảnh của mình vào câu hỏi. Ảnh được thu nhỏ (JPEG, cạnh dài tối đa 640 điểm ảnh) và lưu trong Firebase Cloud Storage để máy của học sinh tải về. Không nên dùng ảnh có người hay thông tin cá nhân.</p>
-<p>Tạo quiz từ tài liệu: khi người dùng chọn một tệp PDF, ảnh hoặc tài liệu (như tệp Word) để tạo quiz, ứng dụng tải tệp lên Firebase (Cloud Storage và Cloud Functions) cùng mã ẩn danh, và máy chủ gửi nội dung tệp tới Google Gemini API để đọc và soạn câu hỏi. Tệp được xoá sau khi xử lý xong; các câu hỏi soạn được lưu trong Cloud Firestore cùng yêu cầu tạo quiz để ứng dụng lấy về, và được lưu trên thiết bị. Câu hỏi người dùng tự soạn hoặc tự sửa chỉ lưu trên thiết bị. Không nên chọn tệp có thông tin cá nhân.</p>
+<p>Tạo quiz từ tài liệu: khi người dùng chọn một tệp PDF, ảnh hoặc tài liệu (như tệp Word) để tạo quiz, ứng dụng tải tệp lên Firebase (Cloud Storage và Cloud Functions) cùng mã ẩn danh, và máy chủ gửi nội dung tệp tới Google Gemini API để đọc và soạn câu hỏi. Tệp được lưu tối đa 12 tháng để Edu Quiz kiểm tra và cải thiện chất lượng câu hỏi, rồi tự động xoá; muốn xoá sớm hơn, hãy gửi email đến admin@genzora.com (với phiên bản ứng dụng cũ hơn, tệp được xoá ngay sau khi xử lý xong); các câu hỏi soạn được lưu trong Cloud Firestore cùng yêu cầu tạo quiz để ứng dụng lấy về, và được lưu trên thiết bị. Câu hỏi người dùng tự soạn hoặc tự sửa chỉ lưu trên thiết bị. Không nên chọn tệp có thông tin cá nhân.</p>
 <ul>
 <li>Trước tệp đầu tiên, ứng dụng giải thích tệp sẽ được gửi tới máy chủ và Google Gemini và hỏi ý kiến đồng ý. Với học sinh dưới lớp 10, người lớn phải qua bước kiểm tra dành cho phụ huynh trước. Có thể rút lại đồng ý ngay trong màn tạo quiz; lựa chọn này chỉ lưu trên máy.</li>
 <li>Tên tệp thật không được gửi đi; máy chủ chỉ nhận nội dung tệp, loại tệp và số câu muốn tạo.</li>
@@ -121,7 +121,7 @@ a{color:var(--green);overflow-wrap:anywhere}
 
 <section id="en" lang="en">
 <h1>Privacy Policy · Edu Quiz - Trắc nghiệm</h1>
-<p class="meta">Effective November 7, 2026 · App: Edu Quiz - Trắc nghiệm (com.genzora.quiz) · Developer: GENZORA COMPANY LIMITED</p>
+<p class="meta">Effective November 8, 2026 · App: Edu Quiz - Trắc nghiệm (com.genzora.quiz) · Developer: GENZORA COMPANY LIMITED</p>
 
 <div class="sum"><strong>Summary for parents</strong>
 <ul>
@@ -161,7 +161,7 @@ a{color:var(--green);overflow-wrap:anywhere}
 <p>Classes: when a teacher opens a class, the app stores in Cloud Firestore the class name, grade, class code and the teacher's anonymous ID. When a pupil joins with the code, the app sends the name they type and their anonymous ID, so the name appears in the teacher's class list. Homework given to a class stores its code, title, number of questions and due date.</p>
 <p>Live games: when a teacher opens a live room, the app stores its questions and progress; each pupil who joins sends the name they type (up to 16 characters), their answers, score and anonymous ID, so the room can show the scores.</p>
 <p>Teachers' pictures: a teacher can add their own pictures to questions. Pictures are made smaller (JPEG, at most 640 pixels on the long side) and stored in Firebase Cloud Storage so pupils' devices can download them. Please do not use pictures of people or with personal information.</p>
-<p>Quizzes from documents: when a user picks a PDF, a photo or a document (such as a Word file) to make a quiz, the app uploads the file to Firebase (Cloud Storage and Cloud Functions) with the anonymous ID, and the server sends its content to the Google Gemini API to read it and write questions. The file is deleted once it has been processed; the questions written are stored in Cloud Firestore with the quiz request so the app can fetch them, and kept on the device. Questions a user writes or edits by hand stay on the device. Please do not pick files that contain personal information.</p>
+<p>Quizzes from documents: when a user picks a PDF, a photo or a document (such as a Word file) to make a quiz, the app uploads the file to Firebase (Cloud Storage and Cloud Functions) with the anonymous ID, and the server sends its content to the Google Gemini API to read it and write questions. The file is kept for up to 12 months so that Edu Quiz can check and improve the quality of the questions, then deleted automatically; to have it deleted sooner, email admin@genzora.com (with older versions of the app, it is deleted as soon as it has been processed); the questions written are stored in Cloud Firestore with the quiz request so the app can fetch them, and kept on the device. Questions a user writes or edits by hand stay on the device. Please do not pick files that contain personal information.</p>
 <ul>
 <li>Before the first file, the app explains that it will go to our server and Google Gemini and asks for consent. Below grade 10, an adult must pass a parental check first. Consent can be withdrawn on the quiz maker screen; the choice is stored on the device only.</li>
 <li>The real file name is not sent; the server only receives the file's content, its type and the number of questions wanted.</li>
